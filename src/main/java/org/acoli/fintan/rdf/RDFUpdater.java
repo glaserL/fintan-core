@@ -370,6 +370,7 @@ public class RDFUpdater extends StreamRdfUpdater {
 							ChangedListener cLdM = new ChangedListener();
 							dM.register(cLdM);
 							for(Update operation : updateRequest.getOperations()) {
+								LOG.info(operation);
 								//							memDataset.begin(ReadWrite.WRITE);
 								UpdateAction.execute(operation, memDataset);
 								//							memDataset.commit();
